@@ -1,0 +1,42 @@
+[
+  {
+    "imagePath": "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "firstName": "Peter John",
+    "lastName": "Matope",
+    "dateOfBirth": "1990.10.12",
+    "phoneNumber": "+265881234567",
+    "email": "pjmatope@gmail.com",
+    "postalAddress": "c/o Hassan Petro,\nP.O. Box 2727,\nBlantyre",
+    "residenceAddress": "Kanjedza, Blantyre",
+    "education": [
+      {
+        "title": "Tevet Training",
+        "institution": "TEVET Lilongwe",
+        "startDate": "2020.10.01",
+        "endDate": "2021.07.12",
+        "extraDetails": "Woodwork and Metalworks training"
+      },
+      {
+        "title": "Tevet Training",
+        "institution": "TEVET Lilongwe",
+        "startDate": "2020.10.01",
+        "endDate": "2021.07.12",
+        "extraDetails": "Woodwork and Metalworks training"
+      }
+    ],
+    "work": [
+      {
+        "title": "Tevet Training",
+        "institution": "TEVET Lilongwe",
+        "startDate": "2020.10.01",
+        "endDate": "2021.07.12",
+        "extraDetails": "Welding and Carpentry"
+      }
+    ],
+    "extras": {
+      "hobbies": ["Football", "Swimming", "Carpentry"],
+      "traits": ["Carpentry design", "Time management", "Project Management", "Creative"],
+      "interests": ["Construction", "Handicraft Design", "Restoration Works"]
+    }
+  }
+]

@@ -1,0 +1,192 @@
+[
+  {
+    "institutionName": "Malawi University of Business and Applied Sciences",
+    "institutionAbbreviation": "MUBAS",
+    "institutionWebsite": "http://www.mubas.ac.mw/",
+    "institutionStatus": {
+      "foundedYear": 1965,
+      "countryRank": 2,
+      "isPublicOwned": true,
+      "isNonProfit": true,
+      "isAccredited": "Fully",
+      "isRegistered": "Yes"
+    },
+    "institutionSpecializations": [
+      "Engineering",
+      "Applied Sciences",
+      "Commerce",
+      "Education",
+      "Media Studies",
+      "Built Environment"
+    ],
+    "contactInfo": {
+      "city": "Blantyre",
+      "country": "Malawi",
+      "postalAddress": "Malawi University of Business and Applied Sciences\nPrivate Bag 303\nChichiri\nBlantyre 3",
+      "phoneNumber": "+265-1-871-637",
+      "emailAddress": "vice-chancellor@mubas.ac.mw"
+    },
+    "instituteCourses": [
+      {
+        "courseName": "Diploma in Automobile Engineering",
+        "courseAward": "Diploma",
+        "courseLevel": "Undergraduate",
+        "isAccredited": "Fully",
+        "courseFeesInMWK": "400000.00",
+        "fields": ["Engineering"],
+        "courseDurationMonths": 36
+      },
+      {
+        "courseName": "Diploma in Biomedical Engineering",
+        "courseAward": "Diploma",
+        "courseLevel": "Undergraduate",
+        "isAccredited": "Fully",
+        "courseFeesInMWK": "400000.00",
+        "fields": ["Engineering"],
+        "courseDurationMonths": 36
+      },
+      {
+        "courseName": "Diploma in Civil Engineering",
+        "courseAward": "Diploma",
+        "courseLevel": "Undergraduate",
+        "isAccredited": "Fully",
+        "courseFeesInMWK": "400000.00",
+        "fields": ["Engineering"],
+        "courseDurationMonths": 36
+      },
+      {
+        "courseName": "Bachelor of Civil Engineering (Transportation) (Hons)",
+        "courseAward": "Bachelors Degree",
+        "courseLevel": "Undergraduate",
+        "isAccredited": "Fully",
+        "courseFeesInMWK": "400000.00",
+        "fields": ["Engineering"],
+        "courseDurationMonths": 60
+      },
+      {
+        "courseName": "Bachelor of Civil Engineering (Water) (Hons)",
+        "courseAward": "Bachelors Degree",
+        "courseLevel": "Undergraduate",
+        "isAccredited": "Fully",
+        "courseFeesInMWK": "400000.00",
+        "fields": ["Engineering"],
+        "courseDurationMonths": 60
+      },
+      {
+        "courseName": "Bachelor of Civil Engineering (Structures) (Hons)",
+        "courseAward": "Bachelors Degree",
+        "courseLevel": "Undergraduate",
+        "isAccredited": "Fully",
+        "courseFeesInMWK": "400000.00",
+        "fields": ["Engineering"],
+        "courseDurationMonths": 60
+      },
+      {
+        "courseName": "Bachelor of Biomedical Engineering",
+        "courseAward": "Bachelors Degree",
+        "courseLevel": "Undergraduate",
+        "isAccredited": "Fully",
+        "courseFeesInMWK": "400000.00",
+        "fields": ["Engineering"],
+        "courseDurationMonths": 60
+      },
+      {
+        "courseName": "Bachelor of Mechanical Engineering (Hons)",
+        "courseAward": "Bachelors Degree",
+        "courseLevel": "Undergraduate",
+        "isAccredited": "Fully",
+        "courseFeesInMWK": "400000.00",
+        "fields": ["Engineering"],
+        "courseDurationMonths": 60
+      },
+      {
+        "courseName": "Bachelor of Mechanical Engineering - Automobile (BAE)",
+        "courseAward": "Bachelors Degree",
+        "courseLevel": "Undergraduate",
+        "isAccredited": "Fully",
+        "courseFeesInMWK": "400000.00",
+        "fields": ["Engineering"],
+        "courseDurationMonths": 60
+      },
+      {
+        "courseName": "Master of Science in Infrastructure Development",
+        "courseAward": "Masters Degree",
+        "courseLevel": "Postgraduate",
+        "isAccredited": "Fully",
+        "courseFeesInMWK": "560000.00",
+        "fields": ["Engineering"],
+        "courseDurationMonths": 24
+      },
+      {
+        "courseName": "PhD and Master of Philosophy in Engineering (Industrial Management)",
+        "courseAward": "Doctorate Degree",
+        "courseLevel": "Postgraduate",
+        "isAccredited": "Fully",
+        "courseFeesInMWK": "560000.00",
+        "fields": ["Engineering"],
+        "courseDurationMonths": 48
+      }
+    ]
+  },
+  {
+    "institutionName": "University of Malawi",
+    "institutionAbbreviation": "UNIMA",
+    "institutionWebsite": "https://www.unima.ac.mw/",
+    "institutionStatus": {
+      "foundedYear": 1965,
+      "countryRank": 1,
+      "isPublicOwned": true,
+      "isNonProfit": true,
+      "isAccredited": "Fully",
+      "isRegistered": "Fully"
+    },
+    "institutionSpecializations": [
+      "Science","Law","Social Sciences","Education","Humanities"
+    ],
+    "contactInfo": {
+      "city": "Zomba",
+      "country": "Malawi",
+      "postalAddress": "University of Malawi\nP.O Box 280\nZomba",
+      "phoneNumber": "+265-1-524-222",
+      "emailAddress": "registrar@unima.ac.mw"
+    },
+    "instituteCourses": [
+      {
+        "courseName": "Bachelor of Arts (Economics)",
+        "courseAward": "Bachelors Degree",
+        "courseLevel": "Undergraduate",
+        "isAccredited": "Fully",
+        "courseFeesInMWK": "350000.00",
+        "fields": ["Social Sciences"],
+        "courseDurationMonths": 48
+      },
+      {
+        "courseName": "Bachelor of Arts (Political Science)",
+        "courseAward": "Bachelors Degree",
+        "courseLevel": "Undergraduate",
+        "isAccredited": "Fully",
+        "courseFeesInMWK": "350000.00",
+        "fields": ["Social Sciences"],
+        "courseDurationMonths": 48
+      },
+      {
+        "courseName": "Master of Arts (Economics)",
+        "courseAward": "Masters Degree",
+        "courseLevel": "Postgraduate",
+        "isAccredited": "Fully",
+        "courseFeesInMWK": "6480000.00",
+        "fields": ["Social Sciences"],
+        "courseDurationMonths": 36
+      },
+      {
+        "courseName": "PhD in Economics",
+        "courseAward": "Doctorate Degree",
+        "courseLevel": "Postgraduate",
+        "isAccredited": "Fully",
+        "courseFeesInMWK": "6000000.00",
+        "fields": ["Social Sciences"],
+        "courseDurationMonths": 36
+      }
+    ]
+  }
+]

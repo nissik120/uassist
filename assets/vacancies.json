@@ -1,0 +1,53 @@
+[
+  {
+    "company": "Pied Piper",
+    "position": "Software Engineer",
+    "title": "Backend Developer",
+    "description": "You will help us build API for our compression infrastructure.",
+    "url": "http://piedpiper.com/jobs/backend-developer",
+    "type": "full-time",
+    "posted": "2022-01-20",
+    "location": "US",
+    "skills": ["Python", "Javascript", "Redis"],
+    "salaryRange": {
+      "from": 90000,
+      "to": 100000,
+      "currency": "USD"
+    },
+    "perks": ["free food", "gym membership"]
+  },
+  {
+    "company": "Pied Piper",
+    "position": "Software Engineer",
+    "title": "Frontend Developer",
+    "description": "You will help us build dashboard for our compression infrastructure.",
+    "url": "http://piedpiper.com/jobs/frontend-developer",
+    "type": "full-time",
+    "posted": "2022-01-20",
+    "location": "US",
+    "skills": ["Javascript", "Angular.js", "CSS"],
+    "salaryRange": {
+      "from": 90000,
+      "to": 100000,
+      "currency": "USD"
+    },
+    "perks": ["free food", "gym membership"]
+  },
+  {
+    "company": "Pied Piper",
+    "position": "UI/UX Designer",
+    "title": "UX Designer",
+    "description": "You will help us design dashboard for our compression infrastructure.",
+    "url": "http://piedpiper.com/jobs/ux-designer",
+    "type": "full-time",
+    "posted": "2022-01-20",
+    "location": "US",
+    "skills": ["HTML", "CSS", "Photoshop"],
+    "salaryRange": {
+      "from": 90000,
+      "to": 100000,
+      "currency": "USD"
+    },
+    "perks": ["free food", "gym membership"]
+  }
+]

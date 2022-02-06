@@ -1,0 +1,64 @@
+[
+  {
+    "grantHeading": "1 Year Study Grant - Computer Engineering",
+    "grantProviderDetails": {
+      "name": "UAssist Developers",
+      "phoneNumber": "+265881737568",
+      "email": "info@uasssist.com",
+      "address": {
+        "postal": "nVision Creative Hub, PO Box 1999, Zomba",
+        "city": "Zomba",
+        "country": "Malawi"
+      }
+    },
+    "grantFinance":{
+      "grantAmount": "200000.00",
+      "grantType": "Partial",
+      "grantFrequency": "Once-Off"
+    },
+    "grantValidityPeriod": {
+      "startDate": "12.05.2022",
+      "endDate": "12.05.2023"
+    },
+    "grantFocus": {
+      "grantBrief": "Looking to support exemplary students currently studying computer engineering.\nOur offer includes a mandatory internship at our facilities.",
+      "grantRequirements": ["1. Creative, Motivated and Self-driven personnel\n2. Knowledgeable in any programming language. Preferably C or Python but not mandatory.\n3. Good english skills\n4. Able to work in a team environment"],
+      "targetAgeGroup": ["15","24"],
+      "targetLevelGroup": ["College Students", "University Students"],
+      "targetDisciplines": ["Computer Engineering"],
+      "targetNationality": [""]
+    },
+    "grantExtraDetails": ""
+  },
+  {
+    "grantHeading": "4 Year Study Grant - Software Engineering",
+    "grantProviderDetails": {
+      "name": "UAssist Developers",
+      "phoneNumber": "+265881737568",
+      "email": "info@uasssist.com",
+      "address": {
+        "postal": "nVision Creative Hub, PO Box 1999, Zomba",
+        "city": "Zomba",
+        "country": "Malawi"
+      }
+    },
+    "grantFinance":{
+      "grantAmount": "400000.00",
+      "grantType": "Full",
+      "grantFrequency": "Yearly"
+    },
+    "grantValidityPeriod": {
+      "startDate": "12.06.2022",
+      "endDate": "12.06.2026"
+    },
+    "grantFocus": {
+      "grantBrief": "Looking to support exemplary students currently studying computer engineering.\nOur offer includes a mandatory internship at our facilities.",
+      "grantRequirements": ["1. Creative, Motivated and Self-driven personnel\n2. Knowledgeable in any programming language. Preferably C or Python but not mandatory.\n3. Good english skills\n4. Able to work in a team environment"],
+      "targetAgeGroup": ["15","24"],
+      "targetLevelGroup": ["First Year","College Students", "University Students"],
+      "targetDisciplines": ["Software Engineering"],
+      "targetNationality": ["Malawians"]
+    },
+    "grantExtraDetails": ""
+  }
+]
