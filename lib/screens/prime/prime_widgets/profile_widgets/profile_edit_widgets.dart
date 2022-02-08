@@ -11,6 +11,7 @@ import 'package:uassist/providers/user_intro_provider.dart';
 import 'package:uassist/screens/prime/home_page.dart';
 import 'package:uassist/screens/prime/prime_widgets/profile_widgets/editlistfield_widget.dart';
 import 'package:uassist/screens/prime/prime_widgets/profile_widgets/textfield_widget.dart';
+import 'package:uassist/screens/prime/prime_widgets/profile_widgets/profile_display_widgets.dart';
 
 /*
 * PERSONAL SECTION
@@ -156,12 +157,12 @@ class _ProfileWidgetState extends State<ProfileWidget> {
           height: 128,
           child: InkWell(
             onTap: (){
-             getImage(true).then(
-                   (value){
-                     print(value);
-                     widget.onClicked(value);
-                   },
-             );
+              getImage(true).then(
+                    (value){
+                  print(value);
+                  widget.onClicked(value);
+                },
+              );
             },
           ),
         ),
@@ -452,18 +453,18 @@ class _WorkProfileSectionState extends State<WorkProfileSection> with AutomaticK
     return SingleChildScrollView(
       padding: EdgeInsets.all(10),
       child: Column(
-      children: [
-        ElevatedButton(
-          onPressed: () async {
-            addWorkItem();
-          },
-          child: Text("+ Add Entry Form"),
-        ),
-        Column(
-          children: this.workWidgets,
-        )
-      ],
-    ),
+        children: [
+          ElevatedButton(
+            onPressed: () async {
+              addWorkItem();
+            },
+            child: Text("+ Add Entry Form"),
+          ),
+          Column(
+            children: this.workWidgets,
+          )
+        ],
+      ),
     );
   }
 
@@ -620,67 +621,21 @@ class UserInfoSummarySection extends StatelessWidget {
     MyUser userData = myProvider.getUser();
 
     return SingleChildScrollView(
+      padding: EdgeInsets.all(10),
       child: Column(
         children: [
           SizedBox(height: 10,),
           Text("Summary", style: TextStyle(fontWeight: FontWeight.bold),),
           SizedBox(height: 10,),
-          Padding(
-            padding: EdgeInsets.all(10),
-            child: Row(
-              children: [
-                buildImage(userData.imagePath),
-                const SizedBox(width: 10,),
-                Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Flexible(
-                      child: new Text('First Name: ${userData.firstName}',
-                        style: TextStyle(fontSize: 12,),
-                      ),
-                    ),
-                    SizedBox(height: 5,),
-                    Flexible(
-                      child: new Text('Last Name: ${userData.lastName}' ,
-                        style: TextStyle(fontSize: 12,),
-                      ),
-                    ),
-                    SizedBox(height: 5,),
-                    Flexible(
-                      child: new Text('Birthdate: ${userData.dateOfBirth}',
-                        style: TextStyle(fontSize: 12,),
-                      ),
-                    ),
-                    SizedBox(height: 5,),
-                    Flexible(
-                      child: new Text('Email: ${userData.email}',
-                        style: TextStyle(fontSize: 12,),
-                      ),
-                    ),
-                    SizedBox(height: 5,),
-                    Flexible(
-                      child: new Text('Phone: ${userData.phoneNumber}',
-                        style: TextStyle(fontSize: 12,),
-                      ),
-                    ),
-                    SizedBox(height: 5,),
-                    Flexible(
-                      child: new Text('Postal: ${userData.postalAddress}',
-                        style: TextStyle(fontSize: 12,),
-                      ),
-                    ),
-                    SizedBox(height: 5,),
-                    Flexible(
-                      child: new Text('Residence: ${userData.residenceAddress}',
-                        style: TextStyle(fontSize: 12,),
-                      ),
-                    ),
-                    SizedBox(height: 5,),
-                  ],
-                ),
-              ],
-            ),
+          UserPersonalWidget(
+            isNetwork: false,
+            imagePath: userData.imagePath,
+            name: '${userData.firstName} ${userData.lastName}',
+            email: userData.email,
+            DoB: userData.dateOfBirth,
+            phone: userData.phoneNumber,
+            residence: userData.residenceAddress,
+            postal: userData.postalAddress,
           ),
           SizedBox(height: 10,),
           buildXPGroup(context, "Education", userData.education,),
@@ -713,24 +668,6 @@ class UserInfoSummarySection extends StatelessWidget {
     );
   }
 
-  Widget buildImage(String imagePath) {
-    final image = imagePath.isNotEmpty ? FileImage(File(imagePath)) : AssetImage("assets/images/userblank.png");
-
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(10.0),
-      child: Material(
-        child: Ink.image(
-          image: image,
-          fit: BoxFit.cover,
-          width: 128,
-          height: 128,
-          child: InkWell(),
-        ),
-      ),
-    );
-
-  }
-
   Widget buildXPGroup(BuildContext context, String groupName, List<UserXP> groupItems){
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -741,7 +678,7 @@ class UserInfoSummarySection extends StatelessWidget {
         ListView.builder(
           shrinkWrap: true,
           itemCount: groupItems.length,
-          itemBuilder: (context, index) =>_XPItemDetails(
+          itemBuilder: (context, index) =>XPItemDetails(
             title: groupItems[index].title,
             institution: groupItems[index].institution,
             startDate: groupItems[index].startDate,
@@ -760,128 +697,3 @@ class UserInfoSummarySection extends StatelessWidget {
   }
 
 }
-
-class _XPItemDetails extends StatelessWidget{
-
-  final String title;
-  final String institution;
-  final String startDate;
-  final String endDate;
-  final String extraDetails;
-
-  const _XPItemDetails({
-    Key key,
-    this.title,
-    this.institution,
-    this.startDate,
-    this.endDate,
-    this.extraDetails
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(5.0, 0.0, 0.0, 0.0),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Text(
-            title,
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          const Padding(padding: EdgeInsets.symmetric(vertical: 2.0)),
-          Text(
-            institution,
-            style: const TextStyle(fontSize: 10.0),
-          ),
-          const Padding(padding: EdgeInsets.symmetric(vertical: 1.0)),
-          Text(
-            '$startDate - $endDate',
-            style: const TextStyle(fontSize: 10.0),
-          ),
-          const Padding(padding: EdgeInsets.symmetric(vertical: 1.0)),
-          Text(
-            extraDetails,
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            style: const TextStyle(
-              fontSize: 12.0,
-              color: Colors.black54,
-            ),
-          ),
-          const SizedBox(height: 10,),
-        ],
-      ),
-    );
-  }
-
-}
-
-class PersonalityExtrasWidget extends StatelessWidget {
-
-  final String groupTag;
-  final List<String> hobbies;
-  final List<String> interests;
-  final List<String> traits;
-
-  const PersonalityExtrasWidget({
-    Key key,
-    @required this.groupTag,
-    this.hobbies,
-    this.interests,
-    this.traits,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-
-    var hobbiesText = hobbies.join(",") ?? '---';
-    var interestsText = interests.join(",") ?? '---';
-    var traitsText = traits.join(",") ?? '---';
-
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Text(
-          groupTag??'',
-        ),
-        buildExtrasItem(interestsText, 'Interests'),
-        buildExtrasItem(traitsText, 'Personality and Traits'),
-        buildExtrasItem(hobbiesText, 'Hobbies'),
-      ],
-    );
-  }
-
-  Widget buildExtrasItem(String extrasGroupList, String extrasGroupName){
-
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Padding(padding: EdgeInsets.symmetric(vertical: 1.0)),
-        Text(
-          extrasGroupName,
-          style: const TextStyle(fontSize: 10.0,),
-        ),
-        const Padding(padding: EdgeInsets.symmetric(vertical: 1.0)),
-        Text(
-          extrasGroupList,
-          style: const TextStyle(fontSize: 10.0),
-        ),
-        const Divider(
-          height: 5,
-          thickness: 2,
-          indent: 5,
-          endIndent:5,
-        ),
-      ],
-    );
-  }
-
-}
-

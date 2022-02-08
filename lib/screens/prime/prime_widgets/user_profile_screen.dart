@@ -9,7 +9,7 @@ import 'package:uassist/model/user_xp.dart';
 import 'package:uassist/screens/prime/prime_widgets/prime_widgets_headers.dart';
 import 'package:uassist/screens/prime/prime_widgets/profile_widgets/profile_edit_screen.dart';
 import 'package:uassist/screens/prime/prime_widgets/profile_widgets/profile_preview_screen.dart';
-import 'package:uassist/screens/prime/prime_widgets/profile_widgets/user_personal_widget.dart';
+import 'package:uassist/screens/prime/prime_widgets/profile_widgets/profile_display_widgets.dart';
 
 Future<String> readJson() {
   return rootBundle.loadString('assets/user.json');
