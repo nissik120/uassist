@@ -1,28 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:uassist/model/user.dart';
 import 'package:uassist/model/user_xp.dart';
+import 'package:uassist/providers/user_intro_provider.dart';
 import 'package:uassist/screens/prime/prime_widgets/profile_widgets/profile_display_widgets.dart';
 
-class ProfilePreviewScreen extends StatefulWidget {
+class ProfilePreviewScreen extends StatelessWidget {
+  const ProfilePreviewScreen({Key key}) : super(key: key);
 
-  final MyUser userInfo;
-
-  const ProfilePreviewScreen({
-    Key key,
-    this.userInfo,
-  }) : super(key: key);
-
-  @override
-  _ProfilePreviewScreenState createState() => _ProfilePreviewScreenState();
-}
-
-class _ProfilePreviewScreenState extends State<ProfilePreviewScreen> {
   @override
   Widget build(BuildContext context) {
-    return profilePreviewWidget(widget.userInfo);
+
+    MyUser userInfo = Provider.of<UserIntroProvider>(context).getUser();
+    return profilePreviewWidget(context, userInfo);
   }
 
-  Widget profilePreviewWidget(MyUser userInfo)=> CustomScrollView(
+  Widget profilePreviewWidget(BuildContext context, MyUser userInfo)=> CustomScrollView(
     slivers: [
       SliverList(
         delegate: SliverChildListDelegate(
@@ -79,8 +72,6 @@ class _ProfilePreviewScreenState extends State<ProfilePreviewScreen> {
       ],
     );
   }
-
-
-
 }
+
 

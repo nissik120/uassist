@@ -1,4 +1,5 @@
 import 'package:flutter/gestures.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:uassist/screens/auth/authentication_service.dart';
 import 'package:uassist/screens/auth/sign_up_page.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,13 @@ class SignInPage extends StatelessWidget{
     final headerText = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+/*        SizedBox(
+          height: 70, width: 70,
+          child: SvgPicture.asset(
+            "assets/logo/uassist-logo-solo-clean.svg",
+            semanticsLabel: 'SVG from asset folder',
+          ),
+        ),*/
         Image.asset(
           'assets/logo/uassist-logo-solo-clean.png',
           width: 70,

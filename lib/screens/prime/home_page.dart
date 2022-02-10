@@ -4,6 +4,7 @@ import 'package:uassist/screens/prime/prime_widgets/dashboard_screen.dart';
 import 'package:uassist/screens/prime/prime_widgets/notifications_screen.dart';
 import 'package:uassist/screens/prime/prime_widgets/settings_screen.dart';
 import 'package:uassist/screens/prime/prime_widgets/user_profile_screen.dart';
+import 'package:uassist/screens/prime/prime_widgets/user_profile_tab_screen.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -14,11 +15,11 @@ class _HomePageState extends State<HomePage> {
 
   int _selectedItemIndex = 0;
 
-  List<Widget> HomeScreenList = [
+  List<Widget> homeScreenList = [
     Dashboard(),
     SettingsScreen(),
     NotificationsScreen(),
-    UserProfileScreen(),
+    UserProfileTabScreen(),
   ];
 
   @override
@@ -26,7 +27,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       //backgroundColor: Colors.white,
       body: SafeArea(
-        child: HomeScreenList[_selectedItemIndex],
+        child: homeScreenList[_selectedItemIndex],
       ),
       bottomNavigationBar: myCustomBottomBar(),
     );

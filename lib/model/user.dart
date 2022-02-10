@@ -53,9 +53,9 @@ class MyUser {
   factory MyUser.fromJson(dynamic json){
 
     final educationList = json['education'] as List;
-    List<UserXP> education = educationList.map((i) => UserXP.fromJson(i)).toList();
+    List<UserXP> education = educationList!=null ? educationList.map((i) => UserXP.fromJson(i)).toList() : [];
     final workList = json['work'] as List;
-    List<UserXP> work = workList.map((i) => UserXP.fromJson(i)).toList();
+    List<UserXP> work = workList!=null ? workList.map((i) => UserXP.fromJson(i)).toList() : [];
 
     return MyUser(
       imagePath: json['imagePath'],
@@ -68,9 +68,9 @@ class MyUser {
       email: json['email'],
       education: education,
       work: work,
-      hobbies: (json['extras']['hobbies'] as List<dynamic>).cast<String>(),
-      interests: (json['extras']['interests'] as List<dynamic>).cast<String>(),
-      traits: (json['extras']['traits'] as List<dynamic>).cast<String>(),
+      hobbies: (json['hobbies'] as List<dynamic>).cast<String>(),
+      interests: (json['interests'] as List<dynamic>).cast<String>(),
+      traits: (json['traits'] as List<dynamic>).cast<String>(),
     );
   }
 

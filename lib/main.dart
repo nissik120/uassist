@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 import 'package:flutter_settings_screens/src/settings.dart';
 import 'package:provider/provider.dart';
-import 'package:splashscreen/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:uassist/app_utils/my_shared_preferences.dart';
 import 'package:uassist/providers/theme_provider.dart';
@@ -16,8 +16,13 @@ import 'package:uassist/screens/prime/home_page.dart';
 Future<void> main() async{
   await Settings.init(cacheProvider: SharePreferenceCache());
   WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.removeAfter(initialization);
   await Firebase.initializeApp();
   runApp(MyApp());
+}
+
+Future initialization(BuildContext context) async {
+  await Future.delayed(Duration(milliseconds: 250));
 }
 
 class MyApp extends StatelessWidget {
@@ -74,14 +79,7 @@ class _LoaderScreenState extends State<LoaderScreen>{
 
   @override
   Widget build(BuildContext context) {
-    return new SplashScreen(
-      seconds:6,
-      navigateAfterSeconds: new AuthenticationWrapper(isFirstTimeOpen: this.isFirstTimeOpen,),
-      image: new Image.asset("assets/logo/uassist-logo-clean.png"),
-      photoSize: 100,
-      backgroundColor: Colors.black,
-      loaderColor: Colors.white,
-    );
+    return new AuthenticationWrapper(isFirstTimeOpen: this.isFirstTimeOpen,);
   }
 
 }
@@ -106,22 +104,4 @@ class AuthenticationWrapper extends StatelessWidget {
     //return HomePage();
   }
 
-  Future checkFirstSeen() async{
-
-  }
-
-}
-
-class MyTheme with ChangeNotifier{
-
-  static bool _isDark = true;
-
-  ThemeMode currentTheme(){
-    return _isDark ? ThemeMode.dark : ThemeMode.light;
-  }
-
-  void switchTheme(){
-    _isDark = !_isDark;
-    notifyListeners();
-  }
 }

@@ -10,11 +10,9 @@ import 'package:uassist/screens/prime/prime_widgets/profile_widgets/profile_sliv
 import 'package:uassist/screens/prime/prime_widgets/profile_widgets/textfield_widget.dart';
 
 class ProfileEditScreen extends StatefulWidget {
-  final MyUser userInfo;
 
   const ProfileEditScreen({
     Key key,
-    this.userInfo,
   }) : super(key: key);
 
   @override
@@ -24,15 +22,12 @@ class ProfileEditScreen extends StatefulWidget {
 class _ProfileEditScreenState extends State<ProfileEditScreen> with SingleTickerProviderStateMixin {
   
   TabController _tabController;
-  MyUser userInfo;
-
   List<Tuple3> _sections;
 
 
   @override
   void initState() {
     super.initState();
-    userInfo = widget.userInfo;
     _sections = [
       Tuple3("Personal", PersonalProfileSection(), FaIcon(FontAwesomeIcons.userAlt, size: 12,)),
       Tuple3("Education", EducationProfileSection(), FaIcon(FontAwesomeIcons.graduationCap, size: 12,)),

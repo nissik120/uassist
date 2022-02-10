@@ -122,9 +122,9 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
             ),
           ],
         ),
-        Expanded(
+/*        Expanded(
           child: isPreviewMode ? ProfilePreviewScreen(userInfo: userInfo) : ProfileEditScreen(userInfo: userInfo),
-        ),
+        ),*/
 
       ],
     ),
