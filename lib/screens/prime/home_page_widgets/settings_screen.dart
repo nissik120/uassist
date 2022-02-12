@@ -4,8 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:uassist/providers/theme_provider.dart';
 import 'package:uassist/screens/auth/authentication_service.dart';
-import 'package:uassist/screens/prime/prime_widgets/account_settings/account_settings_screen.dart';
-import 'package:uassist/screens/prime/prime_widgets/prime_widgets_headers.dart';
+import 'package:uassist/screens/prime/home_page_widgets/account_settings/account_settings_screen.dart';
+import 'package:uassist/screens/general/prime_widgets_headers.dart';
 
 class SettingsScreen extends StatefulWidget {
   //const SettingsScreen({Key? key}) : super(key: key);

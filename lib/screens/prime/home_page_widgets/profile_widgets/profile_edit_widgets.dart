@@ -9,9 +9,9 @@ import 'package:uassist/model/user.dart';
 import 'package:uassist/model/user_xp.dart';
 import 'package:uassist/providers/user_intro_provider.dart';
 import 'package:uassist/screens/prime/home_page.dart';
-import 'package:uassist/screens/prime/prime_widgets/profile_widgets/editlistfield_widget.dart';
-import 'package:uassist/screens/prime/prime_widgets/profile_widgets/textfield_widget.dart';
-import 'package:uassist/screens/prime/prime_widgets/profile_widgets/profile_display_widgets.dart';
+import 'package:uassist/screens/general/editlistfield_widget.dart';
+import 'package:uassist/screens/general/textfield_widget.dart';
+import 'package:uassist/screens/prime/home_page_widgets/profile_widgets/profile_display_widgets.dart';
 
 /*
 * PERSONAL SECTION

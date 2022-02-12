@@ -6,6 +6,7 @@ import 'package:flutter_settings_screens/src/settings.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:uassist/app_utils/my_shared_preferences.dart';
+import 'package:uassist/providers/public_providers.dart';
 import 'package:uassist/providers/theme_provider.dart';
 import 'package:uassist/providers/user_intro_provider.dart';
 import 'package:uassist/screens/auth/authentication_service.dart';
@@ -43,7 +44,10 @@ class MyApp extends StatelessWidget {
           ),
           ChangeNotifierProvider(
             create: (context)=>UserIntroProvider(),
-          )
+          ),
+          ChangeNotifierProvider(
+            create: (context)=>InstitutionProvider(),
+          ),
         ],
         child: Consumer<ThemeProvider>(
           builder: (context, themeObject, _) => MaterialApp(

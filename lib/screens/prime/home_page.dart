@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:uassist/screens/prime/prime_widgets/custom_bottom_bar.dart';
-import 'package:uassist/screens/prime/prime_widgets/dashboard_screen.dart';
-import 'package:uassist/screens/prime/prime_widgets/notifications_screen.dart';
-import 'package:uassist/screens/prime/prime_widgets/settings_screen.dart';
-import 'package:uassist/screens/prime/prime_widgets/user_profile_screen.dart';
-import 'package:uassist/screens/prime/prime_widgets/user_profile_tab_screen.dart';
+import 'package:uassist/screens/general/custom_bottom_bar.dart';
+
+import 'home_page_widgets/dashboard_screen.dart';
+import 'home_page_widgets/notifications_screen.dart';
+import 'home_page_widgets/settings_screen.dart';
+import 'home_page_widgets/user_profile_tab_screen.dart';
 
 class HomePage extends StatefulWidget {
   @override

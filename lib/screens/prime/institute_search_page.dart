@@ -3,9 +3,13 @@ import 'dart:convert';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 import 'package:uassist/model/institution.dart';
-import 'package:uassist/screens/prime/prime_widgets/prime_widgets_headers.dart';
-import 'package:uassist/screens/prime/prime_widgets/search_widget.dart';
+import 'package:uassist/providers/public_providers.dart';
+import 'package:uassist/screens/general/empty_state_widget.dart';
+import 'package:uassist/screens/general/prime_widgets_headers.dart';
+import 'package:uassist/screens/general/search_widget.dart';
+import 'package:uassist/screens/prime/institute_page_widgets/institute_brief_screen.dart';
 
 class InstituteSearchPage extends StatefulWidget {
   //const InstituteSearchPage({Key? key}) : super(key: key);
@@ -15,31 +19,42 @@ class InstituteSearchPage extends StatefulWidget {
 }
 
 class _InstituteSearchPageState extends State<InstituteSearchPage> {
+
   final database = FirebaseDatabase.instance.ref("institutions");
   final String appbarTitle = "Tertiary Institute Search";
   String query = '';
+  bool isDataAvailable = false;
+
   List<Institution> institutionList = [];
   List<Institution> filteredInstituteList = [];
 
-  Future<void> parseJson() async {
-    DatabaseEvent event = await database.once();
-    final List data = jsonDecode(jsonEncode(event.snapshot.value));
-    final List<Institution> _institutionList =  InstitutionList.fromJson(data).institutions;
-    setState(() {
-      institutionList = _institutionList;
-    });
+  void readInstitutionsData() {
+    final institutionProvider = Provider.of<InstitutionProvider>(context);
+    institutionProvider.readInstitutions()
+        .then(
+            (value){
+              setState(() {
+                isDataAvailable = value;
+              });
 
+              if(value){
+                setState(() {
+                  institutionList = institutionProvider.getInstitutionList();
+                  filterInstitute(query);
+                });
+              }
+            });
   }
 
   @override
   void initState() {
     super.initState();
-
-    parseJson();
   }
 
   @override
   Widget build(BuildContext context) {
+    readInstitutionsData();
+
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -51,30 +66,18 @@ class _InstituteSearchPageState extends State<InstituteSearchPage> {
               buildSearch(),
               SizedBox(height: 25,),
               Text('${filteredInstituteList.length} Results Found'),
-              institutionList.isNotEmpty ?
+              institutionList.isNotEmpty | isDataAvailable ?
               buildInstitutionList(context, filteredInstituteList)
-                  : contentFailState(),
+                  : EmptyStateWidget(
+                message: 'Failed to display content',
+                onPressed: readInstitutionsData,
+              ),
             ],
           ),
         ),
       ),
     );
   }
-
-  Widget contentFailState() => Container(
-    margin: EdgeInsets.only(left: 15.0, right: 15.0, top: 100.0),
-    child: Center(
-      child: Column(
-        children: [
-          Text('Failed to display content'),
-          TextButton(
-            onPressed: ()=>parseJson(),
-            child: Text('Refresh'),
-          ),
-        ],
-      ),
-    ),
-  );
 
   Widget buildSearch()=>SearchWidget(
     text: query,
@@ -101,7 +104,14 @@ class _InstituteSearchPageState extends State<InstituteSearchPage> {
   Widget buildInstitution(Institution institution)=>Card(
     elevation: 0,
     child: InkWell(
-      onTap: (){},
+      onTap: (){
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context)=>InstituteBriefScreen(institution: institution,),
+          ),
+        );
+      },
       child: ListTile(
         title: Wrap(
           children: [
@@ -134,5 +144,6 @@ class _InstituteSearchPageState extends State<InstituteSearchPage> {
     });
 
   }
+
 
 }

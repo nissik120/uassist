@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tuple/tuple.dart';
 import 'package:uassist/delegates/sliver_persistent_header_delegate_impl.dart';
-import 'package:uassist/screens/prime/prime_widgets/prime_widgets_headers.dart';
-import 'package:uassist/screens/prime/prime_widgets/profile_widgets/profile_edit_widgets.dart';
+import 'package:uassist/screens/general/prime_widgets_headers.dart';
+import 'package:uassist/screens/prime/home_page_widgets/profile_widgets/profile_edit_widgets.dart';
 
 class UserOnBoardingScreen extends StatefulWidget {
   //const UserOnBoardingScreen({Key? key}) : super(key: key);

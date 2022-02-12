@@ -6,8 +6,8 @@ import 'package:uassist/screens/prime/career_guide_page.dart';
 import 'package:uassist/screens/prime/grant_search_page.dart';
 import 'package:uassist/screens/prime/institute_search_page.dart';
 import 'package:uassist/screens/prime/mentor_program_page.dart';
-import 'package:uassist/screens/prime/prime_widgets/dashboard_data.dart';
-import 'package:uassist/screens/prime/prime_widgets/prime_widgets_headers.dart';
+import 'package:uassist/screens/general/dashboard_data.dart';
+import 'package:uassist/screens/general/prime_widgets_headers.dart';
 import 'package:uassist/screens/prime/study_partner_page.dart';
 import 'package:uassist/screens/prime/vacancies_page.dart';
 

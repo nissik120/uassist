@@ -4,8 +4,8 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:uassist/model/grant.dart';
-import 'package:uassist/screens/prime/prime_widgets/prime_widgets_headers.dart';
-import 'package:uassist/screens/prime/prime_widgets/search_widget.dart';
+import 'package:uassist/screens/general/prime_widgets_headers.dart';
+import 'package:uassist/screens/general/search_widget.dart';
 
 class GrantSearchPage extends StatefulWidget {
   //const GrantSearchPage({Key? key}) : super(key: key);

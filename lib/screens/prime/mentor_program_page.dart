@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uassist/screens/prime/prime_widgets/prime_widgets_headers.dart';
+import 'package:uassist/screens/general/prime_widgets_headers.dart';
 
 class MentorProgramPage extends StatefulWidget {
   //const MentorProgramPage({Key? key}) : super(key: key);

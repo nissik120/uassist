@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:uassist/model/user.dart';
 import 'package:uassist/model/user_xp.dart';
 import 'package:uassist/providers/user_intro_provider.dart';
-import 'package:uassist/screens/prime/prime_widgets/profile_widgets/profile_display_widgets.dart';
+import 'package:uassist/screens/prime/home_page_widgets/profile_widgets/profile_display_widgets.dart';
 
 class ProfilePreviewScreen extends StatelessWidget {
   const ProfilePreviewScreen({Key key}) : super(key: key);

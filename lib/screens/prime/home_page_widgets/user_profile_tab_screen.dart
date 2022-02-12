@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:uassist/providers/user_intro_provider.dart';
-import 'package:uassist/screens/prime/prime_widgets/prime_widgets_headers.dart';
-import 'package:uassist/screens/prime/prime_widgets/profile_widgets/profile_edit_screen.dart';
-import 'package:uassist/screens/prime/prime_widgets/profile_widgets/profile_preview_screen.dart';
+import 'package:uassist/screens/general/prime_widgets_headers.dart';
+import 'package:uassist/screens/prime/home_page_widgets/profile_widgets/profile_edit_screen.dart';
+import 'package:uassist/screens/prime/home_page_widgets/profile_widgets/profile_preview_screen.dart';
+
 
 class UserProfileTabScreen extends StatefulWidget {
   const UserProfileTabScreen({Key key}) : super(key: key);

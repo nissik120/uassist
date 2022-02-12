@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_settings_screens/flutter_settings_screens.dart';
-import 'package:uassist/screens/prime/prime_widgets/prime_widgets_headers.dart';
+import 'package:uassist/screens/general/prime_widgets_headers.dart';
 
 class NotificationsScreen extends StatefulWidget {
   // const NotificationsScreen({Key? key}) : super(key: key);
